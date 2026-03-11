@@ -275,20 +275,23 @@ if IS_STREAMLIT:
             model = models[model_choice]
 
             if model_choice == "LightGBM":
-                pred = model.predict(input_array)[0]
+    pred = model.predict(input_array)[0]
 
-            elif model_choice == "PS":
-                input_norm = normalize_input(input_array, scalers["PS_X"])
-                pred_scaled = model.predict(input_norm)[0]
-                pred = denormalize_output(pred_scaled, scalers["PS_y"])
+elif model_choice == "PS":
+    input_norm = normalize_input(input_array, scalers["PS_X"])
+    pred_scaled = model.predict(input_norm)[0]
+    pred = denormalize_output(pred_scaled, scalers["PS_y"])
 
-            elif model_choice == "MLP":
-                input_norm = normalize_input(input_array, scalers["MLP_X"])
-                pred_scaled = model.predict(input_norm)[0]
-                pred = denormalize_output(pred_scaled, scalers["MLP_y"])
+elif model_choice == "MLP":
+    input_norm = normalize_input(input_array, scalers["MLP_X"])
+    pred_scaled = model.predict(input_norm)[0]
+    pred = denormalize_output(pred_scaled, scalers["MLP_y"])
 
-            else:
-                pred = model.predict(input_df)[0]
+elif model_choice == "XGBoost":
+    pred = model.predict(input_array)[0]
+
+else:
+    pred = model.predict(input_df)[0]
 
             input_df["Predicted_V (kN)"] = pred
             st.session_state.results_df = pd.concat(
@@ -325,3 +328,4 @@ if IS_STREAMLIT:
     </div>
 
     """, unsafe_allow_html=True)
+
