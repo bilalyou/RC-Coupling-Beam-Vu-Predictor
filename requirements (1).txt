@@ -1,0 +1,9 @@
+streamlit
+pandas==1.5.3
+numpy==1.24.0
+xgboost==1.4.2
+catboost
+lightgbm
+tensorflow
+joblib==1.5.0
+scikit-learn==1.1.3
