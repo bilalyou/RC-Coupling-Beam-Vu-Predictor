@@ -25,19 +25,6 @@ The tool allows engineers and researchers to estimate the shear capacity by simp
 
 ---
 
-## 🧠 Machine Learning Models
-
-The following machine learning algorithms are implemented in this tool:
-
-- Random Forest *(Best-performing model)*
-- XGBoost
-- CatBoost
-- LightGBM
-- MLP (Artificial Neural Network)
-- PS (Simplified interpretable equation derived from ANN)
-
----
-
 ## 🖥 Application Interface
 
 The GUI allows users to input the following parameters:
@@ -50,13 +37,13 @@ The GUI allows users to input the following parameters:
 ### Material properties
 - Concrete compressive strength ($f'_c$)
 - Yield strength of longitudinal reinforcement ($f_{yl}$)
-- Yield strength of stirrups ($f_{yv}$)
+- Yield strength of web stirrups ($f_{yv}$)
 - Yield strength of diagonal reinforcement ($f_{yd}$)
 
 ### Reinforcement properties
 - Longitudinal reinforcement ratio ($\rho_l$)
-- Stirrup reinforcement ratio ($\rho_v$)
-- Stirrup spacing ($s$)
+- Web stirrup reinforcement ratio ($\rho_v$)
+- Web Stirrup spacing ($s$)
 - Diagonal reinforcement ratio ($\rho_d$)
 - Diagonal bar angle ($\alpha$)
 
