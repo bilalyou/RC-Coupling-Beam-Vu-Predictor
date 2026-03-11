@@ -87,12 +87,12 @@ if IS_STREAMLIT:
 
         # ===== Models dictionary =====
         models = {
+            "Random Forest": rf_model,
             "XGBoost": xgb_model,
             "CatBoost": cat_model,
             "LightGBM": lgb_model,
-            "PS": ann_ps_model,
             "MLP": ann_mlp_model,
-            "Random Forest": rf_model
+            "PS": ann_ps_model
         }
 
 
@@ -324,6 +324,7 @@ if IS_STREAMLIT:
         Developed by [Bilal Younis]. For academic and research purposes only.
     </div>
     """, unsafe_allow_html=True)
+
 
 
 
