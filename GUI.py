@@ -231,14 +231,14 @@ if IS_STREAMLIT:
         st.markdown("<div class='section-header'>Material Properties</div>", unsafe_allow_html=True)
         fc = st.number_input("Concrete Strength $f'_c$ (MPa)", value=54.0, min_value=18.1, max_value=86.0, step=0.1)
         fyl = st.number_input("Yield Strength of Longitudinal Bars $f_{yl}$ (MPa)", value=476.0, min_value=281.0, max_value=827.0, step=1.0)
-        fyv = st.number_input("Yield Strength of Stirrups $f_{yv}$ (MPa)", value=331.0, min_value=212.0, max_value=953.0, step=1.0)
+        fyv = st.number_input("Yield Strength of Web Stirrups $f_{yv}$ (MPa)", value=331.0, min_value=212.0, max_value=953.0, step=1.0)
         fyd = st.number_input("Yield Strength of Diagonal Bars $f_{yd}$ (MPa)", value=476.0, min_value=0.0, max_value=883.0, step=1.0)
 
     with c3:
         st.markdown("<div class='section-header'>Reinforcement Details</div>", unsafe_allow_html=True)
         Pl = st.number_input("Longitudinal Reinforcement $\\rho_l$ (%)", value=0.25, min_value=0.09, max_value=4.1, step=0.01)
-        Pv = st.number_input("Stirrups Reinforcement $\\rho_v$ (%)", value=0.21, min_value=0.096, max_value=2.9, step=0.001)
-        s = st.number_input("Stirrup Spacing $s$ (mm)", value=150.0, min_value=25.0, max_value=500.0, step=1.0)
+        Pv = st.number_input("Web Stirrups Reinforcement $\\rho_v$ (%)", value=0.21, min_value=0.096, max_value=2.9, step=0.001)
+        s = st.number_input("Web Stirrup Spacing $s$ (mm)", value=150.0, min_value=25.0, max_value=500.0, step=1.0)
         Pd = st.number_input("Diagonal Reinforcement $\\rho_d$ (%)", value=1.005, min_value=0.0, max_value=5.8, step=0.01)
         alpha = st.number_input("Diagonal Angle $\\alpha$ (deg)", value=17.5, min_value=0.0, max_value=45.0, step=1.0)
 
@@ -324,6 +324,7 @@ if IS_STREAMLIT:
         Developed by [Bilal Younis]. For academic and research purposes only.
     </div>
     """, unsafe_allow_html=True)
+
 
 
 
