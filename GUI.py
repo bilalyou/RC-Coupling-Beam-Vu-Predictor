@@ -269,8 +269,8 @@ if IS_STREAMLIT:
             ]], dtype=float)
 
             input_df = pd.DataFrame(input_array, columns=[
-                'L', 'h', 'b', 'f′c', 'fyl', 'fyv', 'Pl', 'Pv', 's', 'Pd', 'fyd', 'α֯'
-            ])
+                'L', 'h', 'b', 'fc', 'fyl', 'fyv', 'Pl', 'Pv', 's', 'Pd', 'fyd', 'alpha'
+            ]).astype(float)
 
             model = models[model_choice]
 
@@ -324,4 +324,5 @@ if IS_STREAMLIT:
         Developed by [Bilal Younis]. For academic and research purposes only.
     </div>
     """, unsafe_allow_html=True)
+
 
