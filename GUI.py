@@ -275,7 +275,7 @@ if IS_STREAMLIT:
             model = models[model_choice]
 
             if model_choice == "LightGBM":
-                pred = model.predict(input_df)[0]
+                pred = model.predict(input_array)[0]
 
             elif model_choice == "PS":
                 input_norm = normalize_input(input_array, scalers["PS_X"])
@@ -323,4 +323,5 @@ if IS_STREAMLIT:
     <div style='text-align: center; color: #888; font-size: 14px;'>
         Developed by [Your Name]. For academic and research purposes only.
     </div>
+
     """, unsafe_allow_html=True)
