@@ -46,3 +46,4 @@ The GUI allows users to input the following parameters:
 - Web Stirrup spacing ($s$)
 - Diagonal reinforcement ratio ($\rho_d$)
 - Diagonal bar angle ($\alpha$)
+---
