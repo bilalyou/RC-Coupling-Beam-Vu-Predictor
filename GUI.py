@@ -321,6 +321,7 @@ if IS_STREAMLIT:
     st.markdown("""
     <hr style='margin-top: 2rem;'>
     <div style='text-align: center; color: #888; font-size: 14px;'>
-        Developed by [Your Name]. For academic and research purposes only.
+        Developed by [Bilal Younis]. For academic and research purposes only.
     </div>
     """, unsafe_allow_html=True)
+
